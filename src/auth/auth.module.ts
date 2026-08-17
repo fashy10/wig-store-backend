@@ -14,7 +14,6 @@ import { JwtStrategy } from './jwt.strategy';
     JwtModule.registerAsync({
       useFactory: () => ({
         secret: process.env.JWT_SECRET,
-        signOptions: { expiresIn: '7d' }, // she stays logged in for a week before needing to log in again
       }),
     }),
   ],
